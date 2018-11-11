@@ -11,7 +11,8 @@
 # Get started
 
 ```bash
-$ docker-compose up
+# on Mac
+$ export HOST_IP=`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'` && docker-compose up
 ```
 
 # settings

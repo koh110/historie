@@ -3,6 +3,15 @@ volumes:
   mysql-volume:
     driver: 'local'
 services:
+  web:
+    image: nginx:1.15
+    ports:
+      - "8000:80"
+    extra_hosts:
+      - "local.com:${HOST_IP}"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/logs/:/var/log/nginx/
   mysql:
     image: mysql:8
     volumes:
