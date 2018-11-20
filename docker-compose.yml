@@ -20,7 +20,7 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: sntagger
+      MYSQL_USER: historie
       MYSQL_PASSWORD: dev
   redis:
     image: redis:4

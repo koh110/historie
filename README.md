@@ -1,4 +1,4 @@
-# sntagger
+# historie
 
 # depands on
 
@@ -21,16 +21,16 @@ $ export HOST_IP=`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'` &
 
 ### create database and user
 
-database is `sntagger` in development.
-database is `sntagger_test` in test.
+database is `historie` in development.
+database is `historie_test` in test.
 
 ```bash
 $ mysql -uroot -h 127.0.0.1 -P3306 -p
 
-mysql> CREATE DATABASE sntagger;
-mysql> use sntagger;
-mysql> ALTER USER sntagger@'%' IDENTIFIED WITH mysql_native_password BY 'dev';
-mysql> GRANT ALL on `sntagger`.* to 'sntagger'@'%';
+mysql> CREATE DATABASE historie;
+mysql> use historie;
+mysql> ALTER USER historie@'%' IDENTIFIED WITH mysql_native_password BY 'dev';
+mysql> GRANT ALL on `historie`.* to 'historie'@'%';
 ```
 
 ### migrations
